@@ -140,6 +140,7 @@ module NetSuite
     autoload :Folder,                           'netsuite/records/folder'
     autoload :InventoryAdjustment,              'netsuite/records/inventory_adjustment'
     autoload :InventoryAdjustmentInventory,     'netsuite/records/inventory_adjustment_inventory'
+    autoload :InventoryAdjustmentInventoryList, 'netsuite/records/inventory_adjustment_inventory_list'
     autoload :InventoryAssignment,              'netsuite/records/inventory_assignment'
     autoload :InventoryAssignmentList,          'netsuite/records/inventory_assignment_list'
     autoload :InventoryDetail,                  'netsuite/records/inventory_detail'
