@@ -14,7 +14,7 @@ module NetSuite
       fields :created_date, :last_modified_date, :memo, :tran_date, :tran_id 
 
       field :custom_field_list, CustomFieldList
-      #field :inventorylist, InventoryAdjustmentInventoryList
+      field :inventorylist, InventoryAdjustmentInventoryList
 
       # TODO from standard copied item record
       # field :accounting_book_detail_list,  AccountingBookDetailList
