@@ -139,6 +139,7 @@ module NetSuite
     autoload :GiftCertRedemptionList,           'netsuite/records/gift_cert_redemption_list'
     autoload :Folder,                           'netsuite/records/folder'
     autoload :InventoryAdjustment,              'netsuite/records/inventory_adjustment'
+    autoload :InventoryAdjustmentInventory,     'netsuite/records/inventory_adjustment_inventory'
     autoload :InventoryAssignment,              'netsuite/records/inventory_assignment'
     autoload :InventoryAssignmentList,          'netsuite/records/inventory_assignment_list'
     autoload :InventoryDetail,                  'netsuite/records/inventory_detail'
