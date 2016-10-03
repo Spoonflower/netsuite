@@ -29,7 +29,6 @@ describe NetSuite::Records::InventoryNumber do
 
   describe '#location_list' do
     it 'can be set from attributes'
-    it 'can be set from a ClassTranslationList object'
   end
 
   describe '#custom_field_list' do
