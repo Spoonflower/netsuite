@@ -28,10 +28,6 @@ describe NetSuite::Records::InventoryAdjustment do
     end
   end
 
-  describe '#location_list' do
-    it 'can be set from attributes'
-  end
-
   describe '#custom_field_list' do
     it 'can be set from attributes'
     it 'can be set from a CustomFieldList object'
