@@ -119,9 +119,17 @@ module NetSuite
           when field_value.is_a?(FalseClass),
                field_value.is_a?(TrueClass)
             'BooleanCustomFieldRef'
+          when field_value.is_a?(String)
+            'StringCustomFieldRef'
+          when field_value.is_a?(Integer)
+            'LongCustomFieldRef'
+          when field_value.is_a?(Float),
+               field_value.is_a?(BigDecimal),
+            'DoubleCustomFieldRef'
           else
             'StringCustomFieldRef'
           end
+          
 
           # TODO seems like DateTime doesn't need the iso8601 call
           #      not sure if this is specific to my env though
