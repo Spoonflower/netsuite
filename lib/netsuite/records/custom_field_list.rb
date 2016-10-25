@@ -106,6 +106,7 @@ module NetSuite
 
         def create_custom_field(reference_id, field_value)
           # all custom fields need types; infer type based on class sniffing
+          
           field_type = case
           when field_value.is_a?(Array)
             'MultiSelectCustomFieldRef'
@@ -124,7 +125,7 @@ module NetSuite
           when field_value.is_a?(Integer)
             'LongCustomFieldRef'
           when field_value.is_a?(Float),
-               field_value.is_a?(BigDecimal),
+               field_value.is_a?(BigDecimal)
             'DoubleCustomFieldRef'
           else
             'StringCustomFieldRef'
