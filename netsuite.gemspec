@@ -13,7 +13,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = 'netsuite'
   gem.require_paths = ['lib']
-  gem.version       = Netsuite::VERSION
+  gem.version       = '20161025.0' #overriding so we can force our apps to get the latest version of our fork #Netsuite::VERSION
 
   gem.add_dependency 'savon', '>= 2.3.0'
 
