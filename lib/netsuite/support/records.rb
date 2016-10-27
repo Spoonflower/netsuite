@@ -9,6 +9,11 @@ module NetSuite
           kname = "#{record_namespace}:"
           kname += k == :klass ? 'class' : k.to_s.lower_camelcase
 
+          if k == :null_field_list
+            kname = 'platformCore:nullFieldList'
+            v = v.map { |i| {"platformCore:name"=>"#{i}"} }
+          end
+
           to_attributes!(hash, kname, v)
 
           if Array === v
@@ -45,6 +50,12 @@ module NetSuite
           hash[:attributes!] ||= {}
           hash[:attributes!][kname] ||= {}
           hash[:attributes!][kname]['typeId'] = v.type_id.lower_camelcase
+        end
+
+        if 'platformCore:nullFieldList' == kname
+          hash[:attributes!] ||= {}
+          hash[:attributes!][kname] ||= {}
+          hash[:attributes!][kname]['xsi:type'] = 'platformCore:NullField'
         end
       end
 
