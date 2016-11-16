@@ -110,6 +110,8 @@ module NetSuite
           field_type = case
           when field_value.is_a?(Array)
             'MultiSelectCustomFieldRef'
+          when field_value.is_a?(NetSuite::Records::RecordRef),
+            'ListOrRecordRef'
           when field_value.is_a?(Hash),
                field_value.is_a?(NetSuite::Records::CustomRecordRef)
             'SelectCustomFieldRef'
